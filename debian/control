@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-akavel-rsrc
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Liang Yan <liangy@hpe.com>,
+           Anthony Fok <foka@debian.org>
+Section: devel
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-akavel-rsrc
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-akavel-rsrc.git
+Homepage: https://github.com/akavel/rsrc
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/akavel/rsrc
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-akavel-rsrc-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Multi-Arch: foreign
+Description: Go library for embedding binary resources in executables
+ rsrc is a Go library based on ideas presented by Minux. It will embed
+ specified binary resources in the .rsrc section of the executable, and
+ this can be detected automatically by 'go build'.

@@ -1,5 +1,48 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-akavel-rsrc (1:0.8.0-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Wrap long lines in changelog entries: 2+git20151103.6.ba14da1-2.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Apply multi-arch hints.
+    + golang-github-akavel-rsrc-dev: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 28 Nov 2022 21:20:45 +0000
+
+golang-github-akavel-rsrc (1:0.8.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Jelmer Vernooĳ ]
+  * Use secure copyright file specification URI.
+  * Trim trailing whitespace.
+
+  [ Anthony Fok ]
+  * New upstream version 0.8.0
+  * Update debian/watch with the correct filenamemangle
+  * Apply "cme fix dpkg" fixes:
+    - Change Priority from "extra" to "optional"
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.1 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Simplify override_dh_auto_install with --no-binaries
+  * Add myself to the list of Uploaders
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Use an epoch so that we can follow upstream version number correctly
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Dec 2019 23:56:37 -0700
+
+golang-github-akavel-rsrc (2+git20151103.6.ba14da1-2) unstable; urgency=medium
+
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 13:43:06 +0300
+
+golang-github-akavel-rsrc (2+git20151103.6.ba14da1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #846169)
+
+ -- Liang Yan <liangy@hpe.com>  Wed, 09 Nov 2016 15:37:29 -0700
